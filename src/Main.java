@@ -5,7 +5,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         /*
-        // Ejercicio12: Imprime Hola + tu nombre
+        // Ejercicio1: Imprime Hola + tu nombre
         System.out.println("Please enter your name: ");
         String name = input.nextLine();
         System.out.println("Hello " + name);
@@ -41,7 +41,7 @@ public class Main {
         System.out.println("Ingresa una cantidad de segundos para devolvertelo en formato HH:MM:SS");
         int seg = input.nextInt();
         int min = seg / 60;
-        
+
 
 
 
