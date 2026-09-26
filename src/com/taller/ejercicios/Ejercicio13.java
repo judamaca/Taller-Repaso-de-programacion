@@ -8,7 +8,7 @@ public class Ejercicio13 implements IEjercicio{
     @Override
     public void ejecutar() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Ingresa el numero con el cual quieres pasar a nn,nnn y lo sumaremos: ");
+        System.out.println("Enter the number you want to transfer to nn,nnn and I'll add it: ");
         String n = input.nextLine();
         String n2 = n.repeat(2);
         String n3 = n.repeat(3);
@@ -16,6 +16,6 @@ public class Ejercicio13 implements IEjercicio{
         int num2 = Integer.parseInt(n2);
         int num3 = Integer.parseInt(n3);
         int suma = num1 + num2 + num3;
-        System.out.println("Los numeros son: " + num1 + ", " + num2 + ", " + num3 + ". La suma es: " + suma);
+        System.out.println("The numers are: " + num1 + ", " + num2 + ", " + num3 + ". The add equals: " + suma);
     }
 }

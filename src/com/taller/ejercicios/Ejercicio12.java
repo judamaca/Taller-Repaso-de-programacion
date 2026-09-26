@@ -8,12 +8,12 @@ public class Ejercicio12 implements IEjercicio{
     @Override
     public void ejecutar() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Ingresa en el siguiente orden las coordenadas (todas positivas): x1, y1, x2, y2");
+        System.out.println("Please enter the coordinates in the following order (All positives): x1, y1, x2, y2");
         double x1 = input.nextDouble();
         double y1 = input.nextDouble();
         double x2 = input.nextDouble();
         double y2 = input.nextDouble();
-        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-        System.out.println("La distancia entre los dos puntos es: " + distancia);
+        double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        System.out.println("The distance between the two points is: " + distance);
     }
 }

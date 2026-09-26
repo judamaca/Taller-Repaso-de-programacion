@@ -11,8 +11,11 @@ public class Main {
         // 1. Registrar todos los ejercicios
         Map<Integer, IEjercicio> taller = new HashMap<>();
         taller.put(1, new Ejercicio01());
+        taller.put(2, new Ejercicio02());
+        taller.put(3, new Ejercicio03());
         taller.put(12, new Ejercicio12());
         taller.put(13, new Ejercicio13());
+        taller.put(14, new Ejercicio14());
 
 
 
