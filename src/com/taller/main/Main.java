@@ -19,11 +19,17 @@ public class Main {
         taller.put(7, new Ejercicio07());
         taller.put(8, new Ejercicio08());
         taller.put(9, new Ejercicio09());
+        taller.put(10, new Ejercicio10());
+        taller.put(11, new Ejercicio11());
         taller.put(12, new Ejercicio12());
         taller.put(13, new Ejercicio13());
         taller.put(14, new Ejercicio14());
-
-
+        taller.put(15, new Ejercicio15());
+        taller.put(16, new Ejercicio16());
+        taller.put(17, new Ejercicio17());
+        taller.put(18, new Ejercicio18());
+        taller.put(19, new Ejercicio19());
+        taller.put(20, new Ejercicio20());
 
 
         Scanner scanner = new Scanner(System.in);
