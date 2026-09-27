@@ -7,7 +7,6 @@ public class Ejercicio01 implements IEjercicio{
     // Ejercicio01: Imprime Hola Mundo
     @Override
     public void ejecutar() {
-        Scanner input = new Scanner(System.in);
         System.out.println("Hello world");
     }
 }
