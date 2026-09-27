@@ -11,6 +11,6 @@ public class Ejercicio03 implements IEjercicio{
 
         System.out.println("Please enter the number: ");
         int n = input.nextInt();
-        System.out.println((int)Math.pow(n, 2));
+        System.out.println("El resultado es: " +(int)Math.pow(n, 2));
     }
 }

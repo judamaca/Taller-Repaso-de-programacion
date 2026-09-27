@@ -13,6 +13,9 @@ public class Main {
         taller.put(1, new Ejercicio01());
         taller.put(2, new Ejercicio02());
         taller.put(3, new Ejercicio03());
+        taller.put(4, new Ejercicio04());
+        taller.put(5, new Ejercicio05());
+        taller.put(6, new Ejercicio06());
         taller.put(12, new Ejercicio12());
         taller.put(13, new Ejercicio13());
         taller.put(14, new Ejercicio14());
@@ -25,23 +28,23 @@ public class Main {
 
         // 2. Menú de ejecución limpio
         while (opcion != 0) {
-            System.out.println("\n=== TALLER DE 40 EJERCICIOS ===");
-            System.out.print("Ingresa el número del ejercicio a ejecutar (0 para salir): ");
+            System.out.println("\n=== Workshop with 40 exercises ===");
+            System.out.print("Enter the number to be executed (0 to exit the program): ");
             opcion = scanner.nextInt();
 
             if (taller.containsKey(opcion)) {
-                System.out.println("\n--- Ejecutando Ejercicio " + opcion + " ---");
+                System.out.println("\n--- Performing the exercise " + opcion + " ---");
 
                 // ESTA LÍNEA EJECUTA EL CÓDIGO DE CUALQUIER EJERCICIO
                 taller.get(opcion).ejecutar();
 
                 System.out.println("\n-----------------------------------");
             } else if (opcion != 0) {
-                System.out.println("Opción no válida o ejercicio aún no creado.");
+                System.out.println("Invalid option or exercise not yet created.");
             }
         }
 
-        System.out.println("Saliendo del taller. ¡Buen trabajo!");
+        System.out.println("Leaving the workshop. Good job!");
         scanner.close();
     }
 }
