@@ -27,7 +27,7 @@ public class Ejercicio07 implements IEjercicio{
         System.out.println("The final result is: " + finalResult);
     }
 
-    private double calculateProm(double a, double b, double c, double d, double e) {
+    public double calculateProm(double a, double b, double c, double d, double e) {
         double prom = (a*0.15) + (b*0.2) + (c*0.15) + (d*0.3) + (e*0.2);
         return prom;
         }

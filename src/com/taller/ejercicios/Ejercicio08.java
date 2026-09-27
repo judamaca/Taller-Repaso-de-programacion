@@ -20,7 +20,7 @@ public class Ejercicio08 implements IEjercicio{
         System.out.println("The final price is: " + finalPrice + ". The VAT amounts to: " + (grossPrice*0.19f));
     }
 
-    private float calculateVAT(float a) {
+    public float calculateVAT(float a) {
         float price = a + (a*0.19f);
         return price;
         }
