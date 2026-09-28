@@ -11,18 +11,31 @@ public class Ejercicio20 implements IEjercicio{
     @Override
     public void ejecutar() {
         Scanner input = new Scanner(System.in);
+        String user = "Martinelimpar";
+        String password = "Martin123";
+        String userLog = "";
+        String passwordLog = "";
 
-        System.out.println("Enter the sales amount to calculate the VAT: ");
-        float grossPrice = input.nextFloat();
-        Ejercicio08 otroEjercicio = new Ejercicio08();
+        do {
+        System.out.println("Enter the user: ");
+        userLog = input.next();
 
-        float resultado = otroEjercicio.calculateVAT(grossPrice);
-        if (resultado > 150000) {
-            System.out.println("You will get a 5% discount");
-            resultado = (float) (resultado - (resultado*0.05f));
+        if (userLog.equals(user)) {
+            System.out.println("Correct user, now enter the password: ");
+
+            do {
+                passwordLog = input.next();
+                if (passwordLog.equals(password)) {
+                    System.out.println("Correct password, Welcome!: " + user);
+                    break;
+                } else {
+                    System.out.println("Incorrect password, try again!");
+                }
+            } while (passwordLog.equals(password));
+        } else {
+            System.out.println("Incorrect password, try again!");
         }
 
-        System.out.println("The final price is: "+resultado);
+        } while (!passwordLog.equals(password));
     }
-
 }
