@@ -29,8 +29,8 @@ public class Main {
         taller.put(17, new Ejercicio17());
         taller.put(18, new Ejercicio18());
         taller.put(19, new Ejercicio19());
-        /*taller.put(20, new Ejercicio20());
-        */
+        taller.put(20, new Ejercicio20());
+
 
         Scanner scanner = new Scanner(System.in);
         int opcion = -1;

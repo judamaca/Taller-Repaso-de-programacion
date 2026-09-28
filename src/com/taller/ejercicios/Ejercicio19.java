@@ -9,12 +9,30 @@ public class Ejercicio19 implements IEjercicio{
     public void ejecutar() {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter a whole number of seconds to convert it to HH:MM:SS");
-        int seg = input.nextInt();
-        int horas = seg / 3600;
-        int minutos = (seg % 3600) / 60;
-        int segundos = (seg % 60) % 60;
+        System.out.println("Enter the coefficient next to the x squared: ");
+        float a = input.nextFloat();
+        System.out.println("Enter the coefficient next to the x: ");
+        float b = input.nextFloat();
+        System.out.println("Enter the coefficient that does not have an x: ");
+        float c = input.nextFloat();
 
-        System.out.println("The estimated time in the format HH:MM:SS is: " + horas + ":" + minutos + ":" + segundos);
+        float[] roots = calculateRoots(a, b, c);
+        if (roots !=  null){
+            System.out.println("Root 1: " + roots[0]);
+            System.out.println("Root 2: " + roots[1]);
+        } else {
+            System.out.println("The equation has no real roots.");
+        }
+    }
+    public float[] calculateRoots(float a, float b, float c) {
+        float disc = (b*b)-4*(a*c);
+
+        if  (disc < 0) {
+            return null;
+        }
+
+        float root1 = (-b + (float) Math.sqrt(disc)) / (2f * a);
+        float root2 = (-b - (float) Math.sqrt(disc)) / (2f * a);
+        return new float[]{root1, root2};
     }
 }
