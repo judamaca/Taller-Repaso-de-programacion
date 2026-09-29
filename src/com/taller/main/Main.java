@@ -30,6 +30,10 @@ public class Main {
         taller.put(18, new Ejercicio18());
         taller.put(19, new Ejercicio19());
         taller.put(20, new Ejercicio20());
+        taller.put(21, new Ejercicio21());
+        taller.put(22, new Ejercicio22());
+        taller.put(23, new Ejercicio23());
+        taller.put(24, new Ejercicio24());
 
 
         Scanner scanner = new Scanner(System.in);
