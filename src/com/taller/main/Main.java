@@ -40,6 +40,11 @@ public class Main {
         taller.put(28, new Ejercicio28());
         taller.put(29, new Ejercicio29());
         taller.put(30, new Ejercicio30());
+        taller.put(31, new Ejercicio31());
+        taller.put(32, new Ejercicio32());
+        taller.put(33, new Ejercicio33());
+        taller.put(34, new Ejercicio34());
+        taller.put(35, new Ejercicio35());
 
 
 
@@ -48,7 +53,7 @@ public class Main {
 
         // 2. Menú de ejecución limpio
         while (opcion != 0) {
-            System.out.println(x"\n=== Workshop with 40 exercises ===");
+            System.out.println("\n=== Workshop with 40 exercises ===");
             System.out.print("Enter the number to be executed (0 to exit the program): ");
             opcion = scanner.nextInt();
 
