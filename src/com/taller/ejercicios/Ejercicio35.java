@@ -1,7 +1,7 @@
 package com.taller.ejercicios;
 
 import com.taller.interfaces.IEjercicio; // 1. Importas la interfaz
-
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -10,21 +10,38 @@ public class Ejercicio35 implements IEjercicio {
 
     @Override
     public void ejecutar() {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Enter a the number to convert it to binary: ");
-        float num = input.nextFloat();
-        float numInt = (int) num;
-        float residuo = 0;
+        float originalNum = input.nextFloat();
+        int intPart = (int) originalNum;
+        float decPart = originalNum - intPart;
+
         StringBuilder bin = new StringBuilder();
 
-        do {
-            residuo = numInt % 2;
-            int residuoAux = (int) residuo;
-            bin.insert(0, residuoAux);
-            numInt = numInt/2;
-        } while (num >= 1);
+        if (intPart == 0) {
+            bin.append(0);
+        } else {
+            while (intPart > 0) {
+                int residuo = intPart % 2;
+                bin.insert(0, residuo);
+                intPart /= 2;
+            }
+        }
 
-        System.out.println("The binary number is "+bin);
+        if (decPart > 0) {
+            bin.append(".");
+            int i = 0;
+
+            while (decPart > 0 && i < 10) {
+                decPart *= 2;
+                int bit = (int) decPart;
+                bin.append(bit);
+                decPart -= bit;
+                i++;
+            }
+        }
+
+        System.out.println("The binary number is: " + bin);
     }
 }
