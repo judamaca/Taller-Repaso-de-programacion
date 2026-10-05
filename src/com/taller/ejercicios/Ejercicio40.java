@@ -31,6 +31,9 @@ public class Ejercicio40 implements IEjercicio {
 
         ArrayList<Float> packs = new ArrayList<>();
         int option = -1;
+        float totalPW = 0;
+        float totalReveneu = 0;
+        float average = totalPW/packs.size();
 
         // Loop runs until the user selects option 0 to exit
         while (option != 0) {
@@ -44,10 +47,6 @@ public class Ejercicio40 implements IEjercicio {
             System.out.print("Choose an option: ");
             option = input.nextInt();
 
-            float totalPW = 0;
-            float totalReveneu = 0;
-            float average = totalPW/packs.size();
-
             switch (option) {
                 case 1 -> {
                     float paketWeight = 1;
@@ -56,7 +55,11 @@ public class Ejercicio40 implements IEjercicio {
                         System.out.println("--- Add a package (Enter the number -1 to exit)");
                         paketWeight = input.nextFloat();
                         totalPW += paketWeight;
-                        if (paketWeight != -1) packs.add(paketWeight);
+                        if (totalPW > 18000) {
+                            System.out.println("Total weight is greater than 18000, you cannot add any more packages");
+                            break;
+                        }
+                        if (paketWeight != -1 && paketWeight != 0) packs.add(paketWeight);
 
                         if (paketWeight > 500) {
                             System.out.println("Pakets can't be greater than 500");
@@ -86,7 +89,7 @@ public class Ejercicio40 implements IEjercicio {
                     for (int i = 0; i < packs.size() - 1; i++) {
                         if (packs.get(i) != 0) {
                             System.out.println("The weight of the lightest package is: " + packs.get(i));
-                            i = packs.size();
+                            break;
                         }
                     }
                 }
