@@ -49,7 +49,7 @@ public class Main {
         taller.put(37, new Ejercicio37());
         taller.put(38, new Ejercicio38());
         taller.put(39, new Ejercicio39());
-        // taller.put(40, new Ejercicio40());
+        taller.put(40, new Ejercicio40());
 
 
 
