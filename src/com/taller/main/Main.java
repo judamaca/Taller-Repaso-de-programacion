@@ -45,6 +45,11 @@ public class Main {
         taller.put(33, new Ejercicio33());
         taller.put(34, new Ejercicio34());
         taller.put(35, new Ejercicio35());
+        taller.put(36, new Ejercicio36());
+        taller.put(37, new Ejercicio37());
+        taller.put(38, new Ejercicio38());
+        taller.put(39, new Ejercicio39());
+        // taller.put(40, new Ejercicio40());
 
 
 

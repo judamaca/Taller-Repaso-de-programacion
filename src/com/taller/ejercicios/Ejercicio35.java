@@ -23,8 +23,8 @@ public class Ejercicio35 implements IEjercicio {
             bin.append(0);
         } else {
             while (intPart > 0) {
-                int residuo = intPart % 2;
-                bin.insert(0, residuo);
+                int waste = intPart % 2;
+                bin.insert(0, waste);
                 intPart /= 2;
             }
         }
