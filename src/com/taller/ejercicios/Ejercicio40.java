@@ -59,7 +59,7 @@ public class Ejercicio40 implements IEjercicio {
                             System.out.println("Total weight is greater than 18000, you cannot add any more packages");
                             break;
                         }
-                        if (paketWeight != -1 && paketWeight != 0) packs.add(paketWeight);
+                        if (0 <= paketWeight <= 500) packs.add(paketWeight);
 
                         if (paketWeight > 500) {
                             System.out.println("Pakets can't be greater than 500");
